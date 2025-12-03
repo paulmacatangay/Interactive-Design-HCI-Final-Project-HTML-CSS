@@ -542,6 +542,14 @@ main {
 }
 
 .about-intro {
+  flex: 1 1 auto;
+}
+
+.about-skills {
+  flex: 0 0 320px;
+}
+
+.about-intro {
   background: rgba(15, 23, 42, 0.9);
   border-radius: 18px;
   border: 1px solid rgba(30, 64, 175, 0.5);
