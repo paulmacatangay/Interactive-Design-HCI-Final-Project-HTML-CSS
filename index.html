@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paul Andrew Macatangay | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Portfolio website of Paul Andrew Macatangay, a Computer Science student showcasing skills, projects, and contact information."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#home" aria-label="Go to home section">
+        <span class="logo-mark">P</span>
+        <span class="logo-text">Paul&nbsp;Andrew&nbsp;Macatangay</span>
+      </a>
+      <button
+        class="nav-toggle"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary" id="primary-navigation">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HOME SECTION -->
+      <section id="home" class="section hero" aria-labelledby="home-heading">
+        <div class="hero-aside hero-media">
+          <figure class="profile-card">
+            <img
+              src="images/paul-andrew-macatangay.jpg"
+              alt="Portrait of Paul Andrew Macatangay wearing a barong tagalog"
+              class="profile-photo"
+            />
+            <figcaption class="profile-caption">
+              Hello! I’m Paul, a Computer Science student who enjoys designing
+              clean, friendly interfaces.
+            </figcaption>
+          </figure>
+
+          <article class="highlight-card" aria-label="Quick profile">
+            <h2 class="highlight-title">Currently Exploring</h2>
+            <ul class="highlight-list">
+              <li>Front-end development (HTML, CSS, basic JavaScript)</li>
+              <li>User-centered design &amp; HCI principles</li>
+              <li>Clean, accessible interfaces</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="hero-content">
+          <p class="hero-eyebrow">Computer Science Student</p>
+          <h1 id="home-heading" class="hero-title">
+            <a href="#about" class="hero-name-link">
+              Paul Andrew <span>Macatangay</span>
+            </a>
+          </h1>
+          <p class="hero-subtitle">
+            I’m a Computer Science student passionate about building simple,
+            human-centered web interfaces that are easy to use and visually
+            clear.
+          </p>
+          <div class="hero-actions">
+            <a href="#about" class="btn primary">About Me</a>
+            <a href="#projects" class="btn ghost">View Projects</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="section" aria-labelledby="about-heading">
+        <div class="section-header">
+          <h2 id="about-heading">About</h2>
+          <p class="section-subtitle">
+            A quick snapshot of who I am and what I can do.
+          </p>
+        </div>
+
+        <div class="about-layout">
+          <article class="about-intro">
+            <h3>Who I Am</h3>
+            <p>
+              I am a Computer Science student with a strong interest in
+              Human-Computer Interaction. I enjoy designing interfaces that feel
+              intuitive, predictable, and easy to learn, especially for
+              beginners and non-technical users.
+            </p>
+            <p>
+              My goal is to combine technical skills with thoughtful design so
+              that every interaction on the screen has a clear purpose and gives
+              useful feedback.
+            </p>
+          </article>
+
+          <aside class="about-skills" aria-label="Skills">
+            <h3>Skills</h3>
+            <ul class="pill-list">
+              <li>HTML5 &amp; Semantic Markup</li>
+              <li>CSS3 &amp; Responsive Design</li>
+              <li>Basic JavaScript</li>
+              <li>Wireframing &amp; Prototyping</li>
+              <li>Usability &amp; HCI Principles</li>
+              <li>Version Control (Git)</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <section
+        id="projects"
+        class="section section-alt"
+        aria-labelledby="projects-heading"
+      >
+        <div class="section-header">
+          <h2 id="projects-heading">Projects</h2>
+          <p class="section-subtitle">
+            Small but meaningful projects where I applied HCI concepts.
+          </p>
+        </div>
+
+        <div class="card-grid" role="list">
+          <article class="card" role="listitem">
+            <h3 class="card-title">Study Planner Interface</h3>
+            <p class="card-meta">Focus: Clear navigation &amp; feedback</p>
+            <p class="card-body">
+              A simple dashboard that helps students plan their week. I focused
+              on visual hierarchy, color coding, and immediate feedback when
+              tasks are added or completed.
+            </p>
+            <ul class="card-tags">
+              <li>Dashboard</li>
+              <li>Typography hierarchy</li>
+              <li>Affordances</li>
+            </ul>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3 class="card-title">Course Feedback Form</h3>
+            <p class="card-meta">Focus: Forms &amp; accessibility</p>
+            <p class="card-body">
+              A clean feedback form with clear labels, logical grouping, and
+              error-prevention cues to help users submit their responses
+              confidently.
+            </p>
+            <ul class="card-tags">
+              <li>Forms</li>
+              <li>Labels</li>
+              <li>Accessible inputs</li>
+            </ul>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3 class="card-title">Information Page Prototype</h3>
+            <p class="card-meta">Focus: Readability &amp; layout</p>
+            <p class="card-body">
+              A responsive informational page designed for new CS students,
+              using clear sections, consistent spacing, and mobile-first
+              layouts.
+            </p>
+            <ul class="card-tags">
+              <li>Responsive</li>
+              <li>Grid layout</li>
+              <li>Content structure</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="section" aria-labelledby="contact-heading">
+        <div class="section-header">
+          <h2 id="contact-heading">Contact</h2>
+          <p class="section-subtitle">
+            Let’s connect. Feel free to reach out about projects,
+            collaborations, or opportunities.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <article class="contact-info">
+            <h3>Quick Details</h3>
+            <ul class="contact-list">
+              <li><strong>Name:</strong> Paul Andrew Macatangay</li>
+              <li><strong>Role:</strong> Computer Science Student</li>
+              <li><strong>Location:</strong> [Your City / University]</li>
+            </ul>
+            <p class="contact-note">
+              This contact form is part of an HCI course project. You can
+              replace the placeholder email with your real address when
+              deploying.
+            </p>
+          </article>
+
+          <form
+            class="contact-form"
+            aria-label="Contact form"
+            autocomplete="on"
+          >
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your full name"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic">
+                <option value="project">Project collaboration</option>
+                <option value="opportunity">Internship / opportunity</option>
+                <option value="question">Question about my work</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Write your message here..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn primary full-width">
+              Send Message
+            </button>
+            <p class="form-hint">
+              This is a prototype. In a real deployment, this button would send
+              your message to my email.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        &copy; <span id="year"></span> Paul Andrew Macatangay. Designed for HCI
+        Interactive Design Final Project.
+      </p>
+    </footer>
+
+    <script>
+      // Minimal, optional JavaScript (not required but allowed by the project)
+      // Updates the year in the footer
+      const yearSpan = document.getElementById("year");
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+
+      // Accessible mobile navigation toggle
+      const navToggle = document.querySelector(".nav-toggle");
+      const nav = document.getElementById("primary-navigation");
+      if (navToggle && nav) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+          navToggle.setAttribute("aria-expanded", String(!isOpen));
+          nav.classList.toggle("site-nav-open", !isOpen);
+        });
+      }
+    </script>
+  </body>
+</html>
+
+
