@@ -230,6 +230,7 @@ main {
 
   .site-nav ul {
     flex-direction: row;
+  gap: 0.5rem;
   }
 }
 
@@ -292,6 +293,7 @@ main {
 
 .hero-title span {
   background: linear-gradient(120deg, #a5b4fc, #4f46e5 55%, #22d3ee);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -310,6 +312,51 @@ main {
   margin-top: 1.5rem;
 }
 
+.hero-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  color: #e5e7eb;
+  font-size: 0.86rem;
+  background: rgba(15, 23, 42, 0.6);
+  transition: border-color var(--transition-fast),
+    background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  border-color: rgba(148, 163, 184, 0.65);
+  background: rgba(15, 23, 42, 0.85);
+  transform: translateY(-1px);
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: rgba(79, 70, 229, 0.2);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon svg {
+  width: 14px;
+  height: 14px;
+  fill: #c7d2fe;
+}
+
 .hero-aside {
   max-width: 420px;
   justify-self: stretch;
@@ -322,6 +369,33 @@ main {
   background: radial-gradient(circle at top left, #111827 0, #020617 70%);
   border: 1px solid rgba(55, 65, 81, 0.9);
   box-shadow: var(--shadow-subtle);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.profile-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    var(--color-accent-soft),
+    transparent 55%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-med);
+}
+
+.profile-card:hover::before {
+  opacity: 1;
+}
+
+.profile-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+  border-color: rgba(79, 70, 229, 0.9);
 }
 
 .profile-photo {
@@ -342,6 +416,33 @@ main {
   padding: 1.75rem 1.5rem;
   border: 1px solid rgba(51, 65, 85, 0.8);
   box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.highlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    var(--color-accent-soft),
+    transparent 55%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-med);
+}
+
+.highlight-card:hover::before {
+  opacity: 1;
+}
+
+.highlight-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+  border-color: rgba(79, 70, 229, 0.8);
 }
 
 .highlight-title {
@@ -428,13 +529,15 @@ main {
 
 /* About section */
 .about-layout {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1.75rem;
 }
 
 @media (min-width: 800px) {
   .about-layout {
-    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr);
+    flex-direction: row;
+    align-items: flex-start;
   }
 }
 
@@ -444,6 +547,33 @@ main {
   border: 1px solid rgba(30, 64, 175, 0.5);
   padding: 1.5rem 1.4rem;
   box-shadow: var(--shadow-subtle);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.about-intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    var(--color-accent-soft),
+    transparent 55%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-med);
+}
+
+.about-intro:hover::before {
+  opacity: 1;
+}
+
+.about-intro:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+  border-color: rgba(59, 130, 246, 0.8);
 }
 
 .about-intro h3 {
@@ -465,6 +595,33 @@ main {
   border-radius: 18px;
   border: 1px solid rgba(55, 65, 81, 0.85);
   padding: 1.4rem 1.35rem 1.3rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.about-skills::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top right,
+    var(--color-accent-soft),
+    transparent 55%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-med);
+}
+
+.about-skills:hover::before {
+  opacity: 1;
+}
+
+.about-skills:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+  border-color: rgba(79, 70, 229, 0.9);
 }
 
 .about-skills h3 {
@@ -566,6 +723,7 @@ main {
 .contact-layout {
   display: grid;
   gap: 1.8rem;
+  align-items: start;
 }
 
 @media (min-width: 880px) {
@@ -579,6 +737,33 @@ main {
   border-radius: 18px;
   border: 1px solid rgba(55, 65, 81, 0.85);
   padding: 1.5rem 1.4rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.contact-info::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    var(--color-accent-soft),
+    transparent 55%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-med);
+}
+
+.contact-info:hover::before {
+  opacity: 1;
+}
+
+.contact-info:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+  border-color: rgba(79, 70, 229, 0.9);
 }
 
 .contact-info h3 {
@@ -596,6 +781,28 @@ main {
 
 .contact-list li + li {
   margin-top: 0.35rem;
+}
+
+.contact-list a {
+  color: #c7d2fe;
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.contact-icon svg {
+  width: 14px;
+  height: 14px;
+  fill: #c7d2fe;
 }
 
 .contact-note {
